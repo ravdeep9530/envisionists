@@ -1,0 +1,13 @@
+<?php
+session_start();
+$hex=$_GET['hex'];
+$id=$_GET['id'];
+if($_SESSION['hex']){
+	if($hex=$_SESSION['hex'])
+	{
+header("Location:payment_confirm.php?hex=$hex&id=$id");
+	}
+}else{
+header("Location:login.php?id=$id");
+}
+?>
